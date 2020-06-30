@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "vanillaful",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Vanillaful",
+  "description": "An extension to vanilla gameplay and features",
   "authors": [
-    "Me!"
+    "DanMizu"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/Dan-Mizu/vanillaful",
+    "sources": "https://github.com/Dan-Mizu/vanillaful"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/vanillaful/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "com.danmizu.vanillaful.Vanillaful"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "vanillaful.mixins.json"
   ],
 
   "depends": {
