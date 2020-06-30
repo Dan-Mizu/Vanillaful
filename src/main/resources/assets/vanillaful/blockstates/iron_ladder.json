@@ -1,19 +1,5 @@
 {
-    "variants": {
-      "facing=east": {
-        "model": "minecraft:block/iron_ladder",
-        "y": 90
-      },
-      "facing=north": {
-        "model": "minecraft:block/iron_ladder"
-      },
-      "facing=south": {
-        "model": "minecraft:block/iron_ladder",
-        "y": 180
-      },
-      "facing=west": {
-        "model": "minecraft:block/iron_ladder",
-        "y": 270
-      }
-    }
+  "variants": {
+    "": { "model": "vanillaful:block/iron_ladder" }
   }
+}

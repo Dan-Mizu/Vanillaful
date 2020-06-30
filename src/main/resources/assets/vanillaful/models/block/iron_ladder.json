@@ -1,8 +1,8 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "block/iron_ladder",
-        "texture": "block/iron_ladder"
+        "particle": "vanillaful:block/iron_ladder",
+        "texture": "vanillaful:block/iron_ladder"
     },
     "elements": [
         {   "from": [ 0, 0, 15.2 ],
