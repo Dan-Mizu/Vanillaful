@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "vanillaful:spruce_ladder"
+    ]
+  },
+  "criteria": {
+    "has_stick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "vanillaful:spruce_stick"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "vanillaful:spruce_ladder"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_stick",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,5 +1,5 @@
 {
-    "ambientocclusion": true,
+    "ambientocclusion": false,
     "textures": {
         "particle": "vanillaful:block/iron_ladder",
         "texture": "vanillaful:block/iron_ladder"

@@ -1,7 +1,33 @@
 {
     "block.minecraft.ladder": "Oak Ladder",
+    "block.minecraft.chest": "Oak Chest",
+    "item.minecraft.stick": "Oak Stick",
 
     "itemGroup.vanillaful.vanillaful": "Vanillaful",
+
     "block.vanillaful.iron_ladder": "Iron Ladder",
-    "item.vanillaful.iron_bar": "Iron Bar"
+    "item.vanillaful.iron_bar": "Iron Bar",
+
+    "block.vanillaful.spruce_ladder": "Spruce Ladder",
+    "item.vanillaful.spruce_stick": "Spruce Stick",
+
+    "block.vanillaful.birch_ladder": "Birch Ladder",
+    "item.vanillaful.birch_stick": "Birch Stick",
+
+    "block.vanillaful.jungle_ladder": "Jungle Ladder",
+    "item.vanillaful.jungle_stick": "Jungle Stick",
+
+    "block.vanillaful.acacia_ladder": "Acacia Ladder",
+    "item.vanillaful.acacia_stick": "Acacia Stick",
+
+    "block.vanillaful.dark_oak_ladder": "Dark Oak Ladder",
+    "item.vanillaful.dark_oak_stick": "Dark Oak Stick",
+
+    "block.vanillaful.crimson_ladder": "Crimson Ladder",
+    "item.vanillaful.crimson_stick": "Crimson Stick",
+
+    "block.vanillaful.warped_ladder": "Warped Ladder",
+    "item.vanillaful.warped_stick": "Warped Stick",
+
+    "block.vanillaful.nether_brick_fence_gate": "Nether Brick Fence Gate"
 }
