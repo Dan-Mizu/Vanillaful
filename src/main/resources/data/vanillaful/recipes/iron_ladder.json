@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "###",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "vanillaful:iron_bar"
+    }
+  },
+  "result": {
+    "item": "vanillaful:iron_ladder",
+    "count": 3
+  }
+}

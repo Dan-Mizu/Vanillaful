@@ -1,5 +1,19 @@
 {
   "variants": {
-    "": { "model": "vanillaful:block/iron_ladder" }
+    "facing=east": {
+      "model": "vanillaful:block/iron_ladder",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "vanillaful:block/iron_ladder"
+    },
+    "facing=south": {
+      "model": "vanillaful:block/iron_ladder",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "vanillaful:block/iron_ladder",
+      "y": 270
+    }
   }
 }
