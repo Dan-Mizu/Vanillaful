@@ -1,0 +1,13 @@
+{
+  "replace": "false",
+  "values": [
+    "vanillaful:iron_ladder",
+    "vanillaful:spruce_ladder",
+    "vanillaful:birch_ladder",
+    "vanillaful:jungle_ladder",
+    "vanillaful:acacia_ladder",
+    "vanillaful:dark_oak_ladder",
+    "vanillaful:crimson_ladder",
+    "vanillaful:warped_ladder"
+  ]
+}

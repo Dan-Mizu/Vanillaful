@@ -1,0 +1,10 @@
+{
+  "replace": "false",
+  "values": [
+    "vanillaful:spruce_stick",
+    "vanillaful:birch_stick",
+    "vanillaful:jungle_stick",
+    "vanillaful:acacia_stick",
+    "vanillaful:dark_oak_stick"
+  ]
+}
