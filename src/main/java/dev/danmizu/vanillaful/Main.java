@@ -8,6 +8,7 @@ package dev.danmizu.vanillaful;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.metadata.ModMetadata;
@@ -30,16 +31,17 @@ import dev.danmizu.vanillaful.blocks.IronLadderBlock;
 import dev.danmizu.vanillaful.util.ModInfo;
 
 public class Main implements ModInitializer {
-	// Register Groups (Creative Inventory Tabs)
+	// Init Groups (Creative Inventory Tabs)
 	public static final ItemGroup VANILLAFUL = FabricItemGroupBuilder.build(
 			new Identifier(ModInfo.MOD_ID, ModInfo.MOD_ID),
-			() -> new ItemStack(Main.IRON_LADDER));
+			() -> new ItemStack(Main.ICON));
 
-	// Register Tags
+	// Init Tags
 	public static final TagKey<Block> LADDERS = TagKey.of(Registry.BLOCK_KEY,
 			new Identifier(ModInfo.MOD_ID, "ladders"));
 
-	// Register Blocks/Items
+	// Init Blocks/Items
+	public static final Item ICON = new Item(new FabricItemSettings());
 	public static final IronLadderBlock IRON_LADDER = new IronLadderBlock(
 			FabricBlockSettings.of(Material.METAL).sounds(BlockSoundGroup.METAL).strength(5, 6).nonOpaque());
 
@@ -60,10 +62,13 @@ public class Main implements ModInitializer {
 		ModMetadata metadata = FabricLoader.getInstance().getModContainer(ModInfo.MOD_ID).get().getMetadata();
 		System.out.println("Loading Vanillaful v" + metadata.getVersion());
 
-		// Add Blocks/Items
-		Registry.register(Registry.BLOCK, new Identifier(ModInfo.MOD_ID, "iron_ladder"), IRON_LADDER);
+		// Register Items
+		Registry.register(Registry.ITEM, new Identifier(ModInfo.MOD_ID, "icon"), ICON);
 		Registry.register(Registry.ITEM, new Identifier(ModInfo.MOD_ID, "iron_ladder"),
-				new BlockItem(IRON_LADDER, new Item.Settings().group(Main.VANILLAFUL)));
+				new BlockItem(IRON_LADDER, new FabricItemSettings().group(Main.VANILLAFUL)));
+
+		// Register Blocks
+		Registry.register(Registry.BLOCK, new Identifier(ModInfo.MOD_ID, "iron_ladder"), IRON_LADDER);
 
 		// Render Ladders
 		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), Main.IRON_LADDER);

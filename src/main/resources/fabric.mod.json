@@ -14,7 +14,7 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/vanillaful/icon.png",
+  "icon": "assets/vanillaful/textures/gui/icon/icon.png",
 
   "environment": "*",
   "entrypoints": {

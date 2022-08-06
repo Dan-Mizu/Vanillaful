@@ -1,0 +1,7 @@
+
+{
+  // Speed For Climbing Up Iron Ladders [default = 0.4]
+  "ironLadderClimbUpSpeed": 0.4,
+  // Speed For Climbing Down Iron Ladders [default = 0.4]
+  "ironLadderClimbDownSpeed": 0.4,
+}
