@@ -1,17 +1,21 @@
 package dev.danmizu.vanillaful.mixin;
 
+// minecraft imports
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+
+// sponge imports
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import dev.danmizu.vanillaful.Main;
+// local imports
+import dev.danmizu.vanillaful.block.ModBlocks;
 // import dev.danmizu.vanillaful.config.ModConfig;
 
 @Mixin(LivingEntity.class)
@@ -31,7 +35,7 @@ public abstract class LivingEntityMixin extends Entity {
         }
 
         // Do nothing if the block they're climbing isnt an Iron Ladder
-        if (!livingEntity.getBlockStateAtPos().isOf(Main.IRON_LADDER)) return;
+        if (!livingEntity.getBlockStateAtPos().isOf(ModBlocks.IRON_LADDER)) return;
 
         // Change climb speed dependant on key pressed and look direction if player isnt flying or looking up/down
         if (isEntityLookingUpOrDown(livingEntity) && !isEntityFlying(livingEntity)) {

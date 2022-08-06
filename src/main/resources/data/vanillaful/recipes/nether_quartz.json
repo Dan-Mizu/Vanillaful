@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "vanillaful:nether_quartz_dust"
+    }
+  },
+  "result": {
+    "item": "minecraft:quartz",
+    "count": 1
+  }
+}

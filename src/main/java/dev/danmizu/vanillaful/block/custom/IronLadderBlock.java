@@ -1,4 +1,4 @@
-package dev.danmizu.vanillaful.blocks;
+package dev.danmizu.vanillaful.block.custom;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LadderBlock;
