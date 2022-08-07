@@ -1,5 +1,6 @@
 package dev.danmizu.vanillaful.block.custom;
 
+// Minecraft Imports
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LadderBlock;
 import net.minecraft.util.math.BlockPos;
@@ -7,9 +8,9 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldView;
 
-public class IronLadderBlock extends LadderBlock {
+public class FreeStandingLadderBlock extends LadderBlock {
 
-    public IronLadderBlock(Settings settings) {
+    public FreeStandingLadderBlock(Settings settings) {
         super(settings);
     }
 

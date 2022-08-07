@@ -1,6 +1,7 @@
 {
   "replace": "false",
   "values": [
+    "minecraft:ladder",
     "vanillaful:iron_ladder"
   ]
 }

@@ -1,24 +1,27 @@
 package dev.danmizu.vanillaful.item;
 
-// minecraft imports
-import net.minecraft.item.*;
+// Minecraft Imports
+import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-// fabric imports
+// Fabric Imports
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 
-// local imports
-import dev.danmizu.vanillaful.Main;
+// local Imports
+import dev.danmizu.vanillaful.util.ModGroups;
 import dev.danmizu.vanillaful.util.ModInfo;
 
 public class ModItems {
 
+    // Mod Icon
     public static final Item ICON = registerItem("icon", new Item(new FabricItemSettings()));
 
+    // Nether Quartz Dust
     public static final Item NETHER_QUARTZ_DUST = registerItem("nether_quartz_dust",
-            new Item(new FabricItemSettings().group(Main.VANILLAFUL)));
+            new Item(new FabricItemSettings().group(ModGroups.VANILLAFUL)));
 
+    // Register Item
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(ModInfo.MOD_ID, name), item);
     }

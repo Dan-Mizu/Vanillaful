@@ -1,6 +1,6 @@
 package dev.danmizu.vanillaful.mixin;
 
-// minecraft imports
+// Minecraft Imports
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -8,15 +8,14 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
-// sponge imports
+// Sponge Imports
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-// local imports
+// Local Imports
 import dev.danmizu.vanillaful.block.ModBlocks;
-// import dev.danmizu.vanillaful.config.ModConfig;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends Entity {
@@ -38,7 +37,7 @@ public abstract class LivingEntityMixin extends Entity {
         if (!livingEntity.getBlockStateAtPos().isOf(ModBlocks.IRON_LADDER)) return;
 
         // Change climb speed dependant on key pressed and look direction if player isnt flying or looking up/down
-        if (isEntityLookingUpOrDown(livingEntity) && !isEntityFlying(livingEntity)) {
+        if (isEntityLookingUpOrDown(livingEntity) && !isPlayerFlying((PlayerEntity) livingEntity)) {
             Vec3d vec3d = cir.getReturnValue();
             double y = vec3d.getY();
 
@@ -57,31 +56,38 @@ public abstract class LivingEntityMixin extends Entity {
             // } else if (isEntityLookingDown(livingEntity)) {
             //     y = getNormalizedPitch(livingEntity.getPitch()) * ModConfig.get().ironLadderClimbDownSpeed * -1.0;
             // }
+
+            // New Speed
             cir.setReturnValue(new Vec3d(vec3d.getX(), y, vec3d.getZ()));
         }
     }
 
-    private boolean isEntityFlying(LivingEntity livingEntity) {
-        PlayerEntity player = (PlayerEntity) livingEntity;
+    // Player is Flying (Creative Mode)
+    private boolean isPlayerFlying(PlayerEntity player) {
         return player.getAbilities().flying;
     }
 
+    // Entity is Looking Up
     private boolean isEntityLookingUp(LivingEntity livingEntity) {
         return livingEntity.getPitch() < 0;
     }
 
+    // Entity is Looking Down
     private boolean isEntityLookingDown(LivingEntity livingEntity) {
         return livingEntity.getPitch() > 0;
     }
 
+    // Entity is Looking either Up or Down
     private boolean isEntityLookingUpOrDown(LivingEntity livingEntity) {
         return livingEntity.getPitch() != 0;
     }
 
+    // Entity is not Moving Forward
     private boolean isEntityStill(LivingEntity livingEntity) {
         return livingEntity.forwardSpeed == 0;
     }
 
+    // Get the Normalized Pitch
     private double getNormalizedPitch(float pitch) {
         return Math.abs(pitch / 90.0);
     }
