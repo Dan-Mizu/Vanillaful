@@ -4,6 +4,10 @@
   </a>
 </p>
 
+<p align="center" style="font-size: 30px;">
+    <b>Vanillaful</b>
+</p>
+
 <p align="center">
     <b>An Extension of Vanilla Minecraft</b>
 </p>
