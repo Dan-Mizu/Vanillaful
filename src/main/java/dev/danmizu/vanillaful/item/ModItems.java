@@ -18,7 +18,7 @@ public class ModItems {
     public static final Item ICON = registerItem("icon", new Item(new FabricItemSettings()));
 
     // Nether Quartz Dust
-    public static final Item NETHER_QUARTZ_DUST = registerItem("nether_quartz_dust",
+    public static final Item NETHER_QUARTZ_DUST = registerItem("quartz_dust",
             new Item(new FabricItemSettings().group(ModGroups.VANILLAFUL)));
 
     // Register Item
