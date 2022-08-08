@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#?#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "vanillaful:quartz_dust"
+    },
+    "?": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "result": {
+    "item": "vanillaful:gel_bucket",
+    "count": 1
+  }
+}
