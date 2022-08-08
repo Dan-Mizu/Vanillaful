@@ -4,13 +4,13 @@
   </a>
 </p>
 
-<p align="center" style="font-size: 30px;">
-    <b>Vanillaful</b>
-</p>
+<h1 align="center">Vanillaful</h1>
 
 <p align="center">
     <b>An Extension of Vanilla Minecraft</b>
 </p>
+
+<br>
 
 <p align="center">
     <a href="https://github.com/Dan-Mizu/Vanillaful/issues" target="_blank">
@@ -26,3 +26,9 @@
         <img src="https://img.shields.io/badge/-Trello-blue?logo=trello&style=for-the-badge" alt="Trello">
     </a>
 </p> -->
+
+<p align="center" style="display: flex; justify-content: center; align-items: center;">
+    <a href="https://www.paypal.com/paypalme/DanMizu" target="_blank" style="padding: 1%">
+        <img height="60rem" src="paypal-donate-button.webp" alt="Donations"/>
+    </a>
+</p>
