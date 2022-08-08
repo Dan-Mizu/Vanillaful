@@ -1,6 +1,6 @@
 <p align="center">
   <a align="center" href='https://www.curseforge.com/minecraft/mc-mods/vanillaful'/>
-    <img src="logo.png" width="100%" />
+    <img src="icon.png" width="20%" />
   </a>
 </p>
 
