@@ -28,7 +28,15 @@
 </p> -->
 
 <p align="center" style="display: flex; justify-content: center; align-items: center;">
+    <a href="https://www.curseforge.com/minecraft/mc-mods/architectury-api" target="_blank" style="padding: 1%">
+        <img height="68rem" src="requiredArchitecturyApi.png" alt="Requires Architectury API"/>
+    </a>
+</p>
+
+<hr>
+
+<p align="center" style="display: flex; justify-content: center; align-items: center;">
     <a href="https://www.paypal.com/paypalme/DanMizu" target="_blank" style="padding: 1%">
-        <img height="60rem" src="paypal-donate-button.webp" alt="Donations"/>
+        <img height="60rem" src="paypal-donate-button.webp" alt="Donation Button"/>
     </a>
 </p>

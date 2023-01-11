@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "mixin": [
+    "vanillaful.mixins.json",
+    "vanillaful-common.mixins.json"
+  ],
+  "quilt_loader": {
+    "group": "${group}",
+    "id": "vanillaful",
+    "version": "${version}",
+    "name": "Vanillaful",
+    "description": "An Extension of Vanilla Minecraft",
+    "authors": [
+      "DanMizu"
+    ],
+    "contact": {
+      "sources": "https://github.com/Dan-Mizu/Vanillaful"
+    },
+    "license": "GPLv3",
+    "icon": "assets/vanillaful/textures/gui/icon/icon.png",
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "environment": "*",
+    "entrypoints": {
+      "init": [
+        "dev.danmizu.vanillaful.quilt.VanillafulQuilt"
+      ]
+    },
+    "depends": [
+      {
+        "id": "quilt_loader",
+        "version": "*"
+      },
+      {
+        "id": "quilt_base",
+        "version": "*"
+      },
+      {
+        "id": "minecraft",
+        "version": ">=1.19.2"
+      },
+      {
+        "id": "architectury",
+        "version": ">=6.2.43"
+      }
+    ]
+  }
+}

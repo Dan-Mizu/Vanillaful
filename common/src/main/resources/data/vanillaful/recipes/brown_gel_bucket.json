@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "decorations",
+    "group": "gel_buckets",
+    "ingredients": [
+      {
+        "item": "vanillaful:gel_bucket"
+      },
+      {
+        "item": "minecraft:brown_dye"
+      }
+    ],
+    "result": {
+      "item": "vanillaful:brown_gel_bucket"
+    }
+  }

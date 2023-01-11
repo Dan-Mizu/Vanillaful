@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "vanillaful",
+  "version": "${version}",
+  "name": "Vanillaful",
+  "description": "An Extension of Vanilla Minecraft",
+  "authors": [
+    "DanMizu"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Dan-Mizu/Vanillaful",
+    "sources": "https://github.com/Dan-Mizu/Vanillaful"
+  },
+  "license": "GPLv3",
+  "icon": "assets/vanillaful/textures/gui/icon/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.danmizu.vanillaful.fabric.VanillafulFabric"
+    ]
+  },
+  "mixins": [
+    "vanillaful.mixins.json",
+    "vanillaful-common.mixins.json"
+  ],
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.19.2",
+    "architectury": ">=6.2.43"
+  }
+}
