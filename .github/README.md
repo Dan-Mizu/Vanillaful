@@ -23,11 +23,13 @@
 
 <br>
 
-<!-- <p align="center">
-    <a href="https://trello.com/b/2yq68yhu/cellworks-portal" target="_blank">
+<p align="center">
+    <a href="https://trello.com/b/cWnb0OZw/vanillaful" target="_blank">
         <img src="https://img.shields.io/badge/-Trello-blue?logo=trello&style=for-the-badge" alt="Trello">
     </a>
-</p> -->
+</p>
+
+<br>
 
 <p align="center" style="display: flex; justify-content: center; align-items: center;">
     <a href="https://www.curseforge.com/minecraft/mc-mods/architectury-api" target="_blank" style="padding: 1%">
