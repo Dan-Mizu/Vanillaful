@@ -1,16 +1,16 @@
 {
-    "type": "minecraft:crafting_shapeless",
-    "category": "decorations",
-    "group": "gel_buckets",
-    "ingredients": [
-      {
-        "item": "vanillaful:gel_bucket"
-      },
-      {
-        "item": "minecraft:purple_dye"
-      }
-    ],
-    "result": {
-      "item": "vanillaful:purple_gel_bucket"
+  "type": "minecraft:crafting_shapeless",
+  "category": "decorations",
+  "group": "gel_buckets",
+  "ingredients": [
+    {
+      "item": "vanillaful:gel_bucket"
+    },
+    {
+      "item": "minecraft:purple_dye"
     }
+  ],
+  "result": {
+    "item": "vanillaful:purple_gel_bucket"
   }
+}

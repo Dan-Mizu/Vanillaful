@@ -1,18 +1,18 @@
 {
-    "type": "minecraft:crafting_shapeless",
-    "category": "decorations",
-    "ingredients": [
-      {
-        "item": "minecraft:water_bucket"
-      },
-      {
-        "item": "minecraft:quartz"
-      },
-      {
-        "item": "minecraft:slime_ball"
-      }
-    ],
-    "result": {
-      "item": "vanillaful:gel_bucket"
+  "type": "minecraft:crafting_shapeless",
+  "category": "decorations",
+  "ingredients": [
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "minecraft:quartz"
+    },
+    {
+      "item": "minecraft:slime_ball"
     }
+  ],
+  "result": {
+    "item": "vanillaful:gel_bucket"
   }
+}
