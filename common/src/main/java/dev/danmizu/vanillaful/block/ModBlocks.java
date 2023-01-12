@@ -27,6 +27,38 @@ public class ModBlocks {
     // Gel Blocks
     // default
     public static final RegistrySupplier<GelBlock> GEL_BLOCK = registerGelBlock("gel_block");
+    // white
+    public static final RegistrySupplier<GelBlock> WHITE_GEL_BLOCK = registerGelBlock("white_gel_block");
+    // orange
+    public static final RegistrySupplier<GelBlock> ORANGE_GEL_BLOCK = registerGelBlock("orange_gel_block");
+    // magenta
+    public static final RegistrySupplier<GelBlock> MAGENTA_GEL_BLOCK = registerGelBlock("magenta_gel_block");
+    // light blue
+    public static final RegistrySupplier<GelBlock> LIGHT_BLUE_GEL_BLOCK = registerGelBlock("light_blue_gel_block");
+    // yellow
+    public static final RegistrySupplier<GelBlock> YELLOW_GEL_BLOCK = registerGelBlock("yellow_gel_block");
+    // lime
+    public static final RegistrySupplier<GelBlock> LIME_GEL_BLOCK = registerGelBlock("lime_gel_block");
+    // pink
+    public static final RegistrySupplier<GelBlock> PINK_GEL_BLOCK = registerGelBlock("pink_gel_block");
+    // gray
+    public static final RegistrySupplier<GelBlock> GRAY_GEL_BLOCK = registerGelBlock("gray_gel_block");
+    // light gray
+    public static final RegistrySupplier<GelBlock> LIGHT_GRAY_GEL_BLOCK = registerGelBlock("light_gray_gel_block");
+    // cyan
+    public static final RegistrySupplier<GelBlock> CYAN_GEL_BLOCK = registerGelBlock("cyan_gel_block");
+    // purple
+    public static final RegistrySupplier<GelBlock> PURPLE_GEL_BLOCK = registerGelBlock("purple_gel_block");
+    // blue
+    public static final RegistrySupplier<GelBlock> BLUE_GEL_BLOCK = registerGelBlock("blue_gel_block");
+    // brown
+    public static final RegistrySupplier<GelBlock> BROWN_GEL_BLOCK = registerGelBlock("brown_gel_block");
+    // green
+    public static final RegistrySupplier<GelBlock> GREEN_GEL_BLOCK = registerGelBlock("green_gel_block");
+    // red
+    public static final RegistrySupplier<GelBlock> RED_GEL_BLOCK = registerGelBlock("red_gel_block");
+    // black
+    public static final RegistrySupplier<GelBlock> BLACK_GEL_BLOCK = registerGelBlock("black_gel_block");
 
     // Register Gel Block
     public static RegistrySupplier<GelBlock> registerGelBlock(String name) {

@@ -1,0 +1,7 @@
+{
+    "parent": "vanillaful:block/gel_block",
+    "textures": {
+        "particle": "vanillaful:block/lime_gel_block",
+        "texture": "vanillaful:block/lime_gel_block"
+    }
+}
