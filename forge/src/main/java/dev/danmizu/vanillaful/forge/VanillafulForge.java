@@ -1,10 +1,11 @@
 package dev.danmizu.vanillaful.forge;
 
 import dev.architectury.platform.forge.EventBuses;
-import dev.danmizu.vanillaful.Vanillaful;
-import dev.danmizu.vanillaful.util.ModInfo;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+
+import dev.danmizu.vanillaful.Vanillaful;
+import dev.danmizu.vanillaful.util.ModInfo;
 
 @Mod(ModInfo.MOD_ID)
 public class VanillafulForge {

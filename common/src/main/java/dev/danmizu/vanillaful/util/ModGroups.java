@@ -12,7 +12,4 @@ public class ModGroups {
     private static Supplier<Registries> registerModGroup(String modID) {
         return Suppliers.memoize(() -> Registries.get(modID));
     }
-
-    public static void register() {
-    }
 }

@@ -20,7 +20,4 @@ public class ModCreativeTabs {
                 new ResourceLocation(modID, name),
                 () -> new ItemStack(icon.get()));
     }
-
-    public static void register() {
-    }
 }

@@ -57,20 +57,22 @@ public class ModItems {
     // register gel bucket items
     private static RegistrySupplier<Item> registerBucketItem(String id) {
         return ITEMS.register(id,
-                () -> new Item(new Item.Properties().tab(ModCreativeTabs.TAB).stacksTo(1)));
+                () -> new Item(defaultProperties().stacksTo(1)));
     }
+
+    // standard item properties
+    public static Item.Properties defaultProperties() {
+        return new Item.Properties().tab(ModCreativeTabs.TAB);
+    }
+
     // private static RegistrySupplier<Item> registerBucketItem(String id) {
     // return ITEMS.register(id,
     // () -> new ArchitecturyBucketItem(ModFluids.GEL, new
     // Item.Properties().tab(ModCreativeTabs.TAB).craftRemainder(Items.BUCKET).stacksTo(1)));
     // }
 
-    // register item
+    // register item (without properties)
     private static RegistrySupplier<Item> registerItem(String id) {
         return ITEMS.register(id, () -> new Item(new Item.Properties()));
-    }
-
-    public static void register() {
-        ITEMS.register();
     }
 }
