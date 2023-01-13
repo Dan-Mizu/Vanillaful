@@ -60,6 +60,10 @@ public class ModBlocks {
     // black
     public static final RegistrySupplier<GelBlock> BLACK_GEL_BLOCK = registerGelBlock("black_gel_block");
 
+    // Iron Ladder
+    public static final RegistrySupplier<IronLadderBlock> IRON_LADDER = registerBlockWithItem("iron_ladder",
+            () -> new IronLadderBlock(), ModItems.defaultProperties());
+
     // Register Gel Block
     public static RegistrySupplier<GelBlock> registerGelBlock(String name) {
         return registerBlockWithItem(name,
