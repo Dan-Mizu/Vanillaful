@@ -1,35 +1,29 @@
 modLoader = "javafml"
 loaderVersion = "[43,)"
-#issueTrackerURL = ""
 license = "GPLv3"
+issueTrackerURL = "https://github.com/Dan-Mizu/Vanillaful/issues"
 
 [[mods]]
 modId = "vanillaful"
 version = "${version}"
 displayName = "Vanillaful"
+displayURL = "https://github.com/Dan-Mizu/Vanillaful"
+logoFile = "assets/vanillaful/textures/gui/icon/icon.png"
 authors = "DanMizu"
 description = '''
 An Extension of Vanilla Minecraft
 '''
-#logoFile = "assets/vanillaful/textures/gui/icon/icon.png"
 
 [[dependencies.vanillaful]]
 modId = "forge"
 mandatory = true
-versionRange = "[43,)"
+versionRange = "[43.1.1,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.vanillaful]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.19.2,)"
+versionRange = "[1.19.2,1.20)"
 ordering = "NONE"
-side = "BOTH"
-
-[[dependencies.vanillaful]]
-modId = "architectury"
-mandatory = true
-versionRange = "[6.2.43,)"
-ordering = "AFTER"
 side = "BOTH"

@@ -9,7 +9,7 @@
   ],
   "contact": {
     "homepage": "https://github.com/Dan-Mizu/Vanillaful",
-    "sources": "https://github.com/Dan-Mizu/Vanillaful"
+    "issues": "https://github.com/Dan-Mizu/Vanillaful"
   },
   "license": "GPLv3",
   "icon": "assets/vanillaful/textures/gui/icon/icon.png",
@@ -17,6 +17,9 @@
   "entrypoints": {
     "main": [
       "dev.danmizu.vanillaful.fabric.VanillafulFabric"
+    ],
+    "client": [
+      "dev.danmizu.vanillaful.fabric.VanillafulFabricClient"
     ]
   },
   "mixins": [
@@ -24,8 +27,7 @@
     "vanillaful-common.mixins.json"
   ],
   "depends": {
-    "fabric": "*",
-    "minecraft": ">=1.19.2",
-    "architectury": ">=6.2.43"
+    "fabricloader": ">=0.14.9",
+    "minecraft": ">=1.19.2"
   }
 }
