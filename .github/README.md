@@ -10,8 +10,6 @@
     <b>An Extension of Vanilla Minecraft</b>
 </p>
 
-<br>
-
 <p align="center">
     <a href="https://github.com/Dan-Mizu/Vanillaful/issues" target="_blank">
         <img src="https://img.shields.io/github/issues/Dan-Mizu/Vanillaful?color=red&style=for-the-badge" alt="Issues"/>
