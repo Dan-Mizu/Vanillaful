@@ -1,5 +1,5 @@
 <p align="center">
-  <a align="center" href='https://www.curseforge.com/minecraft/mc-mods/vanillaful'/>
+  <a align="center" href='#'/>
     <img src="icon.png" width="20%" />
   </a>
 </p>
@@ -20,6 +20,15 @@
     <br>
     <a href="https://trello.com/b/cWnb0OZw/vanillaful" target="_blank">
         <img src="https://img.shields.io/badge/-Trello-blue?logo=trello&style=for-the-badge" alt="Trello">
+    </a>
+</p>
+
+<p align="center">
+    <a href="#" target="_blank">
+        <img style="padding-right:0.5rem" height="60rem" src="modrinth_button.png" alt="Available On Modrinth"/>
+    </a>
+    <a href="https://www.curseforge.com/minecraft/mc-mods/vanillaful" target="_blank">
+        <img style="padding-left:0.5rem" height="60rem" src="curseforge_button.png" alt="Available On Curseforge"/>
     </a>
 </p>
 
