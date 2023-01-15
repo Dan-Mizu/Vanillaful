@@ -25,10 +25,11 @@
 
 <p align="center">
     <a href="#" target="_blank">
-        <img style="padding-right:0.5rem" height="60rem" src="modrinth_button.png" alt="Available On Modrinth"/>
+        <img height="60rem" src="modrinth_button.png" alt="Available On Modrinth"/>
     </a>
+    &nbsp;&nbsp;
     <a href="https://www.curseforge.com/minecraft/mc-mods/vanillaful" target="_blank">
-        <img style="padding-left:0.5rem" height="60rem" src="curseforge_button.png" alt="Available On Curseforge"/>
+        <img height="60rem" src="curseforge_button.png" alt="Available On Curseforge"/>
     </a>
 </p>
 
