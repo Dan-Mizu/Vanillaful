@@ -2,6 +2,7 @@ package dev.danmizu.vanillaful;
 
 import dev.danmizu.vanillaful.registry.*;
 import dev.danmizu.vanillaful.util.Log;
+import dev.danmizu.vanillaful.util.MetaReader;
 
 public class Vanillaful {
     public static void init() {
@@ -12,12 +13,6 @@ public class Vanillaful {
         ModBlockEntityTypes.init();
 
         // log
-        Log.info("Vanillaful v" + getVersion() + " has loaded!");
-    }
-
-    public static String getVersion() {
-        // Gson gson = new Gson();
-        // // JsonObject person = (JsonObject) gson.parse(new FileReader("c:\\exer4-courses.json"));
-        return null;
+        Log.info("Vanillaful v" + MetaReader.getVersion() + " has loaded!");
     }
 }

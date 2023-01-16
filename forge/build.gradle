@@ -39,9 +39,6 @@ processResources {
     filesMatching("META-INF/mods.toml") {
         expand "version": project.version
     }
-    filesMatching("vanillaful.json") {
-        expand "version": project.version
-    }
 }
 
 shadowJar {
