@@ -25,3 +25,6 @@ run/
 
 # other
 .DS_Store
+
+# formatter
+.prettierrc

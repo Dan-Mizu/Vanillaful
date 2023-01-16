@@ -8,7 +8,7 @@ package dev.danmizu.vanillaful.registry;
 // import dev.danmizu.vanillaful.util.ModInfo;
 
 public class ModBlockTags {
-    // private static TagKey<Block> blockTag(String name) {
-    //     return TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation(ModInfo.MOD_ID, name));
-    // }
+	// private static TagKey<Block> blockTag(String name) {
+	//     return TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation(ModInfo.MOD_ID, name));
+	// }
 }

@@ -5,14 +5,15 @@ import dev.danmizu.vanillaful.util.Log;
 import dev.danmizu.vanillaful.util.MetaReader;
 
 public class Vanillaful {
-    public static void init() {
-        ModBlocks.init();
-        ModItems.init();
-        ModSoundEvents.init();
-        ModEntityTypes.init();
-        ModBlockEntityTypes.init();
 
-        // log
-        Log.info("Vanillaful v" + MetaReader.getVersion() + " has loaded!");
-    }
+	public static void init() {
+		ModBlocks.init();
+		ModItems.init();
+		ModSoundEvents.init();
+		ModEntityTypes.init();
+		ModBlockEntityTypes.init();
+
+		// log
+		Log.info("Vanillaful v" + MetaReader.getVersion() + " has loaded!");
+	}
 }
