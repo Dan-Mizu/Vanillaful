@@ -1,30 +1,11 @@
 package dev.danmizu.vanillaful.registry;
 
-// import net.minecraft.world.effect.MobEffectInstance;
-// import net.minecraft.world.effect.MobEffects;
-// import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.food.FoodProperties;
 
 public class ModFoods {
-//     public static final FoodProperties CHEESE = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.3F).build();
-//     public static final FoodProperties CHOCOLATE = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F)
-//             .build();
-//     public static final FoodProperties CORN = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).build();
-//     public static final FoodProperties GRAPES = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).fast()
-//             .build();
-//     public static final FoodProperties RAISINS = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.4F).fast()
-//             .build();
-//     public static final FoodProperties JERKY = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.6F).build();
-//     public static final FoodProperties PEANUTS = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F)
-//             .build();
-//     public static final FoodProperties POPCORN = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).fast()
-//             .build();
-
-//     public static final FoodProperties GRAPE_PBJ = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.6F)
-//             .build();
-//     public static final FoodProperties BERRY_PBJ = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.6F)
-//             .build();
-//     public static final FoodProperties HAM_AND_CHEESE = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.6F)
-//             .build();
-//     public static final FoodProperties CHOCOLATE_CAKE_SLICE = (new FoodProperties.Builder()).nutrition(2)
-//             .saturationMod(0.1F).effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 1), 1.0F).fast().build();
+    // Honey Bucket
+    public static final FoodProperties HONEY_BUCKET = (new FoodProperties.Builder()).nutrition(8).saturationMod(6F)
+            .effect(new MobEffectInstance(MobEffects.REGENERATION, 100, 0), 1.0F).build();
 }

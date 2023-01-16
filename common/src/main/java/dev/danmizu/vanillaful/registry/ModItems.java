@@ -5,6 +5,7 @@ import java.util.function.Supplier;
 import net.minecraft.world.item.Item;
 
 import dev.danmizu.vanillaful.gui.ModCreativeTab;
+import dev.danmizu.vanillaful.item.HoneyBucketItem;
 
 public class ModItems {
 
@@ -48,7 +49,8 @@ public class ModItems {
         public static final Supplier<Item> BLACK_GEL_BUCKET = registerBucketItem("black_gel_bucket");
 
         // Honey Bucket
-        public static final Supplier<Item> HONEY_BUCKET = registerBucketItem("honey_bucket");
+        public static final Supplier<HoneyBucketItem> HONEY_BUCKET = ModRegistry.registerItem("honey_bucket",
+                        () -> new HoneyBucketItem(defaultProperties()));
 
         // Default Item Properties
         public static Item.Properties defaultProperties() {
