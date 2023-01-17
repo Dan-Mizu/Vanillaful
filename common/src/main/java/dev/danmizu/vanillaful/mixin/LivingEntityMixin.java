@@ -24,7 +24,7 @@ public abstract class LivingEntityMixin extends Entity {
 		at = @At(value = "TAIL"),
 		cancellable = true
 	)
-	public void vanillaful_iron_ladder_handleOnClimbable(
+	public void vanillaful_iron_ladder$handleOnClimbable(
 		Vec3 motion,
 		CallbackInfoReturnable<Vec3> cir
 	) {
@@ -34,7 +34,7 @@ public abstract class LivingEntityMixin extends Entity {
 		// Do nothing if entity isn't a player, is on the ground, or is sneaking.
 		if (
 			!(livingEntity instanceof Player) ||
-			this.onGround ||
+			livingEntity.isOnGround() ||
 			livingEntity.isCrouching()
 		) {
 			return;
@@ -55,10 +55,10 @@ public abstract class LivingEntityMixin extends Entity {
 			Vec3 vec3 = cir.getReturnValue();
 			double y = vec3.y();
 
-			// Player is moving forward
-			if (isEntityMovingForward(livingEntity)) {
-				// Player is looking up
-				if (isEntityLookingUp(livingEntity)) {
+			// Player is looking up
+			if (isEntityLookingUp(livingEntity)) {
+				// Player is moving forward or holding space/jump/ascend
+				if (isEntityMovingForward(livingEntity)) {
 					// Change climb speed
 					y = getClimbingSpeedChange((Player) livingEntity);
 
@@ -66,16 +66,16 @@ public abstract class LivingEntityMixin extends Entity {
 					cir.setReturnValue(new Vec3(vec3.x(), y, vec3.z()));
 				}
 			}
-			// Player is not moving forward or backward but is looking down
-			else if (
-				!isEntityMovingBackward(livingEntity) &&
-				isEntityLookingDown(livingEntity)
-			) {
-				// Change climb speed
-				y = getClimbingSpeedChange((Player) livingEntity) * -1;
+			// Player is looking down
+			else if (isEntityLookingDown(livingEntity)) {
+				// Player is not holding forward/backward and is not holding space/jump/ascend
+				if (!isEntityMovingForwardOrBackward(livingEntity)) {
+					// Change climb speed
+					y = getClimbingSpeedChange((Player) livingEntity) * -1;
 
-				// Return Y velocity change
-				cir.setReturnValue(new Vec3(vec3.x(), y, vec3.z()));
+					// Return Y velocity change
+					cir.setReturnValue(new Vec3(vec3.x(), y, vec3.z()));
+				}
 			}
 		}
 	}
@@ -101,8 +101,12 @@ public abstract class LivingEntityMixin extends Entity {
 		return livingEntity.zza > 0;
 	}
 
-	private boolean isEntityMovingBackward(LivingEntity livingEntity) {
-		return livingEntity.zza < 0;
+	// private boolean isEntityMovingBackward(LivingEntity livingEntity) {
+	// 	return livingEntity.zza < 0;
+	// }
+
+	private boolean isEntityMovingForwardOrBackward(LivingEntity livingEntity) {
+		return livingEntity.zza != 0;
 	}
 
 	private float getClimbingSpeedChange(Player player) {
