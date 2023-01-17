@@ -19,7 +19,8 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.FlowingFluid;
+import net.minecraft.world.level.material.Fluid;
+
 import org.jetbrains.annotations.NotNull;
 
 public class ModRegistry {
@@ -41,7 +42,7 @@ public class ModRegistry {
 	}
 
 	@ExpectPlatform
-	public static <T extends FlowingFluid> Supplier<T> registerFluid(
+	public static <T extends Fluid> Supplier<T> registerFluid(
 		String name,
 		Supplier<T> fluid
 	) {

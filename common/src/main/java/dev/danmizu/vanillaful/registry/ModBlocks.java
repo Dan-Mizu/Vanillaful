@@ -1,10 +1,13 @@
 package dev.danmizu.vanillaful.registry;
 
 import dev.danmizu.vanillaful.block.*;
+import earth.terrarium.botarium.api.registry.fluid.BotariumLiquidBlock;
 import java.util.function.Supplier;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 
 public class ModBlocks {
 
@@ -84,6 +87,23 @@ public class ModBlocks {
 		() -> new IronLadderBlock(),
 		ModItems.defaultProperties()
 	);
+
+	// Gel Fluid
+	public static final Supplier<Block> GEL_FLUID = registerGelFluidBlock(
+		"gel"
+	);
+
+	// Register Gel Fluid Block
+	public static Supplier<Block> registerGelFluidBlock(String name) {
+		return ModRegistry.registerBlock(
+			name,
+			() ->
+				new BotariumLiquidBlock(
+					ModFluidProperties.GEL_FLUID,
+					BlockBehaviour.Properties.copy(Blocks.WATER)
+				)
+		);
+	}
 
 	// Register Gel Blocks
 	public static Supplier<GelBlock> registerGelBlock(String name) {

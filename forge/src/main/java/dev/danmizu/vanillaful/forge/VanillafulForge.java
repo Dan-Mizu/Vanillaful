@@ -16,6 +16,7 @@ public class VanillafulForge {
 
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
+		ModRegistryImpl.FLUIDS.register(bus);
 		ModRegistryImpl.BLOCKS.register(bus);
 		ModRegistryImpl.ITEMS.register(bus);
 		ModRegistryImpl.SOUND_EVENTS.register(bus);

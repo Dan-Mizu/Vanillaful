@@ -2,6 +2,8 @@ package dev.danmizu.vanillaful.registry;
 
 import dev.danmizu.vanillaful.gui.ModCreativeTab;
 import dev.danmizu.vanillaful.item.HoneyBucketItem;
+import earth.terrarium.botarium.api.registry.fluid.FluidBucketItem;
+import earth.terrarium.botarium.api.registry.fluid.FluidData;
 import java.util.function.Supplier;
 import net.minecraft.world.item.Item;
 
@@ -13,7 +15,8 @@ public class ModItems {
 	/// Gel Buckets
 	// default
 	public static final Supplier<Item> GEL_BUCKET = registerBucketItem(
-		"gel_bucket"
+		"gel_bucket",
+		ModFluidProperties.GEL_FLUID
 	);
 	// white
 	public static final Supplier<Item> WHITE_GEL_BUCKET = registerBucketItem(
@@ -94,6 +97,17 @@ public class ModItems {
 	// Register Bucket Item
 	private static Supplier<Item> registerBucketItem(String name) {
 		return registerItem(name, defaultProperties().stacksTo(1));
+	}
+
+	private static Supplier<Item> registerBucketItem(
+		String name,
+		FluidData fluidData
+	) {
+		return ModRegistry.registerItem(
+			name,
+			() ->
+				new FluidBucketItem(fluidData, defaultProperties().stacksTo(1))
+		);
 	}
 
 	// Register Item and add it to the Creative Tab

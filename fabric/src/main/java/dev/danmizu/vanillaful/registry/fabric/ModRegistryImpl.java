@@ -24,6 +24,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.material.Fluid;
 
 public class ModRegistryImpl {
 
@@ -47,6 +48,18 @@ public class ModRegistryImpl {
 			Registry.ITEM,
 			new ResourceLocation(ModInfo.MOD_ID, name),
 			item.get()
+		);
+		return () -> registry;
+	}
+
+	public static <T extends Fluid> Supplier<T> registerFluid(
+		String name,
+		Supplier<T> fluid
+	) {
+		var registry = Registry.register(
+			Registry.FLUID,
+			new ResourceLocation(ModInfo.MOD_ID, name),
+			fluid.get()
 		);
 		return () -> registry;
 	}

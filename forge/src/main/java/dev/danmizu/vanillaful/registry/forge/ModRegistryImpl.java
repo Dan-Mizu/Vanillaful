@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.Entity;
@@ -19,6 +20,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -34,6 +36,10 @@ public class ModRegistryImpl {
 	);
 	public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(
 		ForgeRegistries.ENTITY_TYPES,
+		ModInfo.MOD_ID
+	);
+	public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(
+		Registry.FLUID_REGISTRY,
 		ModInfo.MOD_ID
 	);
 	public static final DeferredRegister<SoundEvent> SOUND_EVENTS = DeferredRegister.create(
@@ -57,6 +63,13 @@ public class ModRegistryImpl {
 		Supplier<T> item
 	) {
 		return ITEMS.register(name, item);
+	}
+
+	public static <T extends Fluid> Supplier<T> registerFluid(
+		String name,
+		Supplier<T> fluid
+	) {
+		return FLUIDS.register(name, fluid);
 	}
 
 	public static <T extends SoundEvent> Supplier<T> registerSoundEvent(

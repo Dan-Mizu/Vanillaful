@@ -7,6 +7,8 @@ import dev.danmizu.vanillaful.util.MetaReader;
 public class Vanillaful {
 
 	public static void init() {
+		ModFluidProperties.init();
+        ModFluids.init();
 		ModBlocks.init();
 		ModItems.init();
 		ModSoundEvents.init();
