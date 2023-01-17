@@ -1,4 +1,5 @@
 plugins {
+    id "jvm-class-extensions" version "1.3"
     id "architectury-plugin" version "3.4-SNAPSHOT"
     id "dev.architectury.loom" version "0.12.0-SNAPSHOT" apply false
 }
@@ -8,6 +9,7 @@ architectury {
 }
 
 subprojects {
+    apply plugin: "jvm-class-extensions"
     apply plugin: "dev.architectury.loom"
 
     loom {
@@ -34,6 +36,7 @@ allprojects {
 
     repositories {
         maven { url "https://maven.parchmentmc.org" }
+        maven { url "https://maven.msrandom.net/repository/root/"}
     }
 
     tasks.withType(JavaCompile) {
