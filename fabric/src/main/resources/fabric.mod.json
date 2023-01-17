@@ -27,7 +27,8 @@
     "vanillaful-common.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.9",
-    "minecraft": ">=1.19.2"
+    "fabricloader": ">=${fabric_loader_version}",
+    "minecraft": ">=1.19.2",
+    "botarium": ">=${botarium_version}"
   }
 }

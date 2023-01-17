@@ -1,6 +1,8 @@
 plugins {
     id "architectury-plugin" version "3.4-SNAPSHOT"
-    id "dev.architectury.loom" version "0.12.0-SNAPSHOT" apply false
+    id "dev.architectury.loom" version "1.0-SNAPSHOT" apply false
+
+    id "com.matthewprenger.cursegradle" version "1.4.0" // literally never gonna update
 }
 
 architectury {
@@ -9,6 +11,7 @@ architectury {
 
 subprojects {
     apply plugin: "dev.architectury.loom"
+    apply plugin: "com.matthewprenger.cursegradle"
 
     loom {
         silentMojangMappingsLicense()
@@ -18,7 +21,7 @@ subprojects {
         minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
         mappings loom.layered() {
             officialMojangMappings()
-            parchment("org.parchmentmc.data:parchment-1.19.2:${rootProject.parchment_version}")
+            parchment("org.parchmentmc.data:parchment-$rootProject.minecraft_version:$rootProject.parchment_version")
         }
     }
 }
@@ -33,7 +36,14 @@ allprojects {
     group = rootProject.maven_group
 
     repositories {
-        maven { url "https://maven.parchmentmc.org" }
+        // maven { url "https://maven.parchmentmc.org" }
+        maven { url = "https://nexus.resourcefulbees.com/repository/maven-public/"}
+        maven {
+            url "https://cursemaven.com"
+            content {
+                includeGroup "curse.maven"
+            }
+        }
     }
 
     tasks.withType(JavaCompile) {
