@@ -60,7 +60,7 @@ public abstract class LivingEntityMixin extends Entity {
 				// Player is moving forward or holding space/jump/ascend
 				if (isEntityMovingForward(livingEntity)) {
 					// Change climb speed
-					y = getClimbingSpeedChange((Player) livingEntity);
+					y = getClimbingSpeedChange(livingEntity);
 
 					// Return Y velocity change
 					cir.setReturnValue(new Vec3(vec3.x(), y, vec3.z()));
@@ -71,7 +71,7 @@ public abstract class LivingEntityMixin extends Entity {
 				// Player is not holding forward/backward and is not holding space/jump/ascend
 				if (!isEntityMovingForwardOrBackward(livingEntity)) {
 					// Change climb speed
-					y = getClimbingSpeedChange((Player) livingEntity) * -1;
+					y = getClimbingSpeedChange(livingEntity) * -1;
 
 					// Return Y velocity change
 					cir.setReturnValue(new Vec3(vec3.x(), y, vec3.z()));
@@ -101,6 +101,10 @@ public abstract class LivingEntityMixin extends Entity {
 		return livingEntity.zza > 0;
 	}
 
+	// private boolean isEntityJumping(LivingEntity livingEntity) {
+	// 	return livingEntity.y > 0;
+	// }
+
 	// private boolean isEntityMovingBackward(LivingEntity livingEntity) {
 	// 	return livingEntity.zza < 0;
 	// }
@@ -109,7 +113,7 @@ public abstract class LivingEntityMixin extends Entity {
 		return livingEntity.zza != 0;
 	}
 
-	private float getClimbingSpeedChange(Player player) {
-		return (float) (Math.abs(player.getXRot() / 90.0) * 0.4);
+	private float getClimbingSpeedChange(LivingEntity livingEntity) {
+		return (float) (Math.abs(((Player) livingEntity).getXRot() / 90.0) * 0.4);
 	}
 }
