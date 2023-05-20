@@ -4,12 +4,12 @@ import dev.danmizu.vanillaful.registry.ModRegistry;
 import dev.danmizu.vanillaful.util.ModInfo;
 import java.util.function.Supplier;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
@@ -124,7 +124,7 @@ public class ModRegistryImpl {
 		Supplier<BlockEntityType<T>> type,
 		BlockEntityRendererProvider<T> renderProvider
 	) {
-		BlockEntityRendererRegistry.register(type.get(), renderProvider);
+		BlockEntityRenderers.register(type.get(), renderProvider);
 	}
 
 	public static <T extends Block> void setFlammable(
