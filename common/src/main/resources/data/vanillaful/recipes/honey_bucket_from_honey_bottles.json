@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "honey_buckets",
+  "ingredients": [
+    {
+      "item": "minecraft:bucket"
+    },
+    {
+      "item": "vanillaful:honey_bottle"
+    },
+    {
+      "item": "vanillaful:honey_bottle"
+    },
+    {
+      "item": "vanillaful:honey_bottle"
+    },
+    {
+      "item": "vanillaful:honey_bottle"
+    }
+  ],
+  "result": {
+    "item": "vanillaful:honey_bucket"
+  }
+}
