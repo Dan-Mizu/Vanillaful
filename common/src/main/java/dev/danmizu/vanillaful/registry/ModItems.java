@@ -2,6 +2,8 @@ package dev.danmizu.vanillaful.registry;
 
 import dev.danmizu.vanillaful.gui.ModCreativeTab;
 import dev.danmizu.vanillaful.item.HoneyBucketItem;
+import dev.danmizu.vanillaful.item.MilkBottleItem;
+
 import java.util.function.Supplier;
 import net.minecraft.world.item.Item;
 
@@ -84,6 +86,12 @@ public class ModItems {
 	public static final Supplier<HoneyBucketItem> HONEY_BUCKET = ModRegistry.registerItem(
 		"honey_bucket",
 		() -> new HoneyBucketItem(defaultProperties())
+	);
+
+	// Milk Bottle
+	public static final Supplier<MilkBottleItem> MILK_BOTTLE = ModRegistry.registerItem(
+		"milk_bottle",
+		() -> new MilkBottleItem(defaultProperties())
 	);
 
 	// Default Item Properties

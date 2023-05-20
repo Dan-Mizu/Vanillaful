@@ -15,4 +15,8 @@ public class ModFoods {
 				1.0F
 			)
 			.build();
+
+	// Milk Bottle
+	public static final FoodProperties MILK_BOTTLE =
+		(new FoodProperties.Builder()).build();
 }
